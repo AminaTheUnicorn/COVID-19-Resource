@@ -4,17 +4,43 @@ var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-teleg
 var newsUrl = 'https://newsapi.org/v2/everything?sortBy=publishedAt&pageSize=10&qInTitle=+covid-19 OR(+coronavirus OR +corona-virus OR +disease OR +pandemic)&domains=' + newsAPIDomains + '&apiKey=' + newsAPI;
 
 fetch(newsUrl)
-.then(function(response) {
-console.log(response.json());
-})
+    .then(response => response.json())
+    .then(function (response) {
+        console.log(response);
+
+
+
+        for (let i = 0; i < response.articles.length; i++) {
+            var newArticleDiv = $("<div>").attr("class", "card");
+            var articleHeader = $("<h5>").attr("class", "card-header").text(response.articles[i].title);
+            newArticleDiv.append(articleHeader);
+            var articleBody = $("<div>").attr("class", "card-body");
+            newArticleDiv.append(articleBody);
+            var articleDescript = $("<h6>").text(response.articles[i].description);
+            articleBody.append(articleDescript);
+            var info = $("<p>").text("Sourced From: " + response.articles[i].source.name + " - Written By: " + response.articles[i].author)
+            articleBody.append(info);
+            var button = $("<a>").attr("class", "btn btn-primary").attr("href", response.articles[i].url).attr("target", "blank").text("See Full Story")
+            articleBody.append(button)
+            $("#mainCardContents").append(newArticleDiv)
+        }
+
+    })
+
+
+
+
+// newArticleBody.append($("<h6>")).text(response.articles[i].description);
+// newArticleBody.append("<p>").text("Source: " + response.articles[i].source.name + " " + " Written by: " + response.articles[i].author)  
+
 
 
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'
-  };
-  
-  fetch("https://covid-19-testing.github.io/locations/texas/complete.json", requestOptions)
+};
+
+fetch("https://covid-19-testing.github.io/locations/texas/complete.json", requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

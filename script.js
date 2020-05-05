@@ -7,11 +7,8 @@ fetch(newsUrl)
     .then(response => response.json())
     .then(function (response) {
         console.log(response);
-
-
-
         for (let i = 0; i < response.articles.length; i++) {
-            var newArticleDiv = $("<div>").attr("class", "card");
+            var newArticleDiv = $("<article>").attr("class", "card");
             var articleHeader = $("<h5>").attr("class", "card-header").text(response.articles[i].title);
             newArticleDiv.append(articleHeader);
             var articleBody = $("<div>").attr("class", "card-body");
@@ -28,10 +25,6 @@ fetch(newsUrl)
     })
 
 
-
-
-// newArticleBody.append($("<h6>")).text(response.articles[i].description);
-// newArticleBody.append("<p>").text("Source: " + response.articles[i].source.name + " " + " Written by: " + response.articles[i].author)  
 
 
 

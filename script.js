@@ -1,7 +1,8 @@
 
 var newsAPI = "4d2b9f062a9846ddb0e115c2ff221c20"
 var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-telegram.com";
-var newsUrl = 'https://newsapi.org/v2/everything?pageSize=100&domains=' + newsAPIDomains + '&qInTitle=covid-19 OR(coronavirus)&apiKey=' + newsAPI;
+var cityName = "wylie"
+var newsUrl = 'https://newsapi.org/v2/everything?qInTitle="+covid-19" OR("+coronavirus") AND(' + cityName + ')&pageSize=100&domains=' + newsAPIDomains + '&apiKey=' + newsAPI;
 
 fetch(newsUrl)
 .then(function(response) {

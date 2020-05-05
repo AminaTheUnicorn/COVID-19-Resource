@@ -1,8 +1,7 @@
 
 var newsAPI = "4d2b9f062a9846ddb0e115c2ff221c20"
-var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-telegram.com";
-var cityName = "wylie"
-var newsUrl = 'https://newsapi.org/v2/everything?qInTitle="+covid-19" OR("+coronavirus") AND(' + cityName + ')&pageSize=100&domains=' + newsAPIDomains + '&apiKey=' + newsAPI;
+var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-telegram.com,metroplexdaily.com,dallasobserver.com,texasmonthly.com,wfaa.com,texastribune.org,dallascityhall.com,dfw.cbslocal.com,texasstandard.org,thetexan.news,kera.org,dshs.state.tx.us";
+var newsUrl = 'https://newsapi.org/v2/everything?pageSize=100&domains=' + newsAPIDomains + '&qInTitle=covid-19 OR(coronavirus) OR(Coronavirus disease) OR(Coronavirus pandemic)&apiKey=' + newsAPI;
 
 fetch(newsUrl)
 .then(function(response) {

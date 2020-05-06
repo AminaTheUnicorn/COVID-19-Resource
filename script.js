@@ -61,35 +61,45 @@ fetch("https://covid-19-testing.github.io/locations/texas/complete.json", reques
 
 
     // var locations = [];
-    // var cityLocal = dropDownList;
-    // console.log(cityLocal);
-    // console.log(result);
-
-     console.log(result.physical_address[0].address_1);
-   
     
-    result.forEach(function(clinicLocations){
-    if (locations.indexOf(clinicLocations.physical_address[0].city) === cityLocal ) {
+  
+    console.log(result);
+
      
-     var li_Div = document.createElement("li");
-     var address = $("<p>").text(result.physical_address[0].address_1);
-     var name = $("<p>").text(result.name);
-     var phone = $("<p>").text(result.phones[0].number);
-    
    
     
-    } else {
-      
-    }
-    })
+
+     function clinicLocations (){
+       $("#testList").empty();
+      var cityLocal = (this.textContent);
+      var locations = result.filter(item => item.physical_address[0].city ===cityLocal)
+
+      locations.forEach(location =>{
+
+     var li_Div = $("<li class='list-group-item'>");
+     var address = $("<p>").text("Address: " + location.physical_address[0].address_1);
+     var name = $("<p>").text("Name: " + location.name);
+     var phone = $("<p>").text("Phone: " + location.phones[0].number);
     
-     $(".dropdown-item").onClick = function() {clinicLocations()};
+   li_Div.append(name,address,phone);
+   
+   li_Div.appendTo("#testList");
 
 
-
-    
-
+   
   })
+  
+  
+} 
+$(".dropdown-item").on("click",clinicLocations) 
+    })
+    .catch(error => console.log('error', error));
+    
 
 
-  .catch(error => console.log('error', error));
+
+    
+
+  
+
+

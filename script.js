@@ -9,7 +9,7 @@ fetch(newsUrl)
         console.log(response);
         for (let i = 0; i < response.articles.length; i++) {
             var newArticleDiv = $("<article>").attr("class", "card");
-            var articleHeader = $("<h5>").attr("class", "card-header").text(response.articles[i].title);
+            var articleHeader = $("<h4>").attr("class", "card-header").text(response.articles[i].title);
             newArticleDiv.append(articleHeader);
             var articleBody = $("<div>").attr("class", "card-body");
             newArticleDiv.append(articleBody);
@@ -23,9 +23,6 @@ fetch(newsUrl)
         }
 
     })
-
-
-
 
 
 var requestOptions = {

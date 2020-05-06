@@ -17,12 +17,6 @@
 </head>
 
 <body>
-
-
-
-
-
-
   <!-- JavaScript -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -37,14 +31,131 @@
             <h1 class="display-1">COVID-19 UPDATES</h1>
           </span> </marquee>
     </div>
+    <!-- main container -->
     <main class="container">
-
+      <!-- Parent Row -->
       <section class="row justify-content-around">
-
         <div class="col">
           <div class="row">
-            <div class="col">Covid Tips Go here</div>
+            <div class="col">
+              <!-- card for the covid 19 helpful tips and resouces -->
+              <section class="card">
+                <!-- header for tips and resources card -->
+                <h3 class="card-header" style="text-align: center;">
+                  How to Protect Yourself & Others
+                </h3>
+                <div class="row">
+                  <!-- list of topics -->
+                  <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                      <a class="list-group-item list-group-item-action active" id="list-know-list" data-toggle="list"
+                        href="#list-know" role="tab" aria-controls="know">Know How it Spreads</a>
+                      <a class="list-group-item list-group-item-action" id="list-wash-list" data-toggle="list"
+                        href="#list-wash" role="tab" aria-controls="wash">Wash Hands Often</a>
+                      <a class="list-group-item list-group-item-action" id="list-contact-list" data-toggle="list"
+                        href="#list-contact" role="tab" aria-controls="contact">Avoid Close Contact</a>
+                      <a class="list-group-item list-group-item-action" id="list-mask-list" data-toggle="list"
+                        href="#list-mask" role="tab" aria-controls="mask">Cover Your Mouth and Nose</a>
+                      <a class="list-group-item list-group-item-action" id="list-cough-list" data-toggle="list"
+                        href="#list-cough" role="tab" aria-controls="cough">Cover Coughs and Sneezes</a>
+                      <a class="list-group-item list-group-item-action" id="list-clean-list" data-toggle="list"
+                        href="#list-clean" role="tab" aria-controls="clean">Clean and Disinfect</a>
+                      <a class="list-group-item list-group-item-action" id="list-update-list" data-toggle="list"
+                        href="#list-update" role="tab" aria-controls="update">Stay Up to Date</a>
+                    </div>
+                  </div>
+                  <!-- content for each topic -->
+                  <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="list-know" role="tabpanel"
+                        aria-labelledby="list-know-list">
+                        <p>The best way to prevent illness is to avoid being exposed to this virus.</p>
+
+                        <p>The virus is thought to spread mainly from person-to-person.</p>
+                        <ul>
+                          <li>Between people who are in close contact with one another (within about 6 feet).</li>
+                          <li>Through respiratory droplets produced when an infected person coughs, sneezes or talks.
+                            These droplets can land in the mouths or noses of people who are nearby or possibly be
+                            inhaled
+                            into the lungs.</li>
+                          <li>Some recent studies have suggested that COVID-19 may be spread by people who are not
+                            showing
+                            symptoms.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-wash" role="tabpanel" aria-labelledby="list-wash-list">
+                        <p>Wash your hands often</p>
+                        <ul>
+                          <li>Wash your hands often with soap and water for at least 20 seconds especially after you
+                            have been in a public place, or after blowing your nose, coughing, or sneezing.</li>
+                          <li>If soap and water are not readily available, use a hand sanitizer that contains at least
+                            60% alcohol. Cover all surfaces of your hands and rub them together until they feel dry.
+                          </li>
+                          <li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-contact" role="tabpanel" aria-labelledby="list-contact-list">
+                        <p>Avoid close contact with people who are sick, even inside your home. If possible, maintain 6
+                          feet between the person who is sick and other household members.</p>
+                        <p>Put distance between yourself and other people outside of your home.</p>
+                        <ul>
+                          <li>Remember that some people without symptoms may be able to spread virus.</li>
+                          <li>Stay at least 6 feet (about 2 arms’ length) from other people.</li>
+                          <li>Do not gather in groups.</li>
+                          <li>Stay out of crowded places and avoid mass gatherings.</li>
+                          <li>Keeping distance from others is especially important for people who are at higher risk of
+                            getting very sick.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-mask" role="tabpanel" aria-labelledby="list-mask-list">
+                        <p>Keeping distance from others is especially important for people who are at higher risk of
+                          getting very sick.</p>
+                        <ul>
+                          <li>You could spread COVID-19 to others even if you do not feel sick.</li>
+                          <li>The cloth face cover is meant to protect other people in case you are infected.</li>
+                          <li>Continue to keep about 6 feet between yourself and others. The cloth face cover is not a
+                            substitute for social distancing.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-cough" role="tabpanel" aria-labelledby="list-cough-list">
+                        <p>Cover coughs and sneezes</p>
+                        <ul>
+                          <li>f you are in a private setting and do not have on your cloth face covering, remember to
+                            always cover your mouth and nose with a tissue when you cough or sneeze or use the inside of
+                            your elbow.</li>
+                          <li>Throw used tissues in the trash.</li>
+                          <li>Immediately wash your hands with soap and water for at least 20 seconds. If soap and water
+                            are not readily available, clean your hands with a hand sanitizer that contains at least 60%
+                            alcohol.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-clean" role="tabpanel" aria-labelledby="list-clean-list">
+                        <p>Clean and disinfect</p>
+                        <ul>
+                          <li>Clean AND disinfect frequently touched surfaces daily. This includes tables, doorknobs,
+                            light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.
+                          </li>
+                          <li>If surfaces are dirty, clean them. Use detergent or soap and water prior to disinfection.
+                          </li>
+                          <li>Then, use a household disinfectant.</li>
+                        </ul>
+                      </div>
+                      <div class="tab-pane fade" id="list-update" role="tabpanel" aria-labelledby="list-update-list">
+                        <p>Stay up to date with the latest info and recomendations with the following health sources</p>
+                        <ul>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html" target="blank">CDC Covid-19
+                              Website</a></li>
+                          <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+                              target="blank">WHO Covid-19 Website</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
+          <!-- #### row for the drop down and address display -->
           <div class="row">
             <div class="col">
               <div class="dropdown">
@@ -54,29 +165,33 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <!-- <button class="dropdown-item" type="button">Action</button> -->
-
                 </div>
               </div>
 
               <div class="card" style="width: 18rem;">
                 <ul id="testList" class="list-group list-group-flush">
                   <!-- <li class="list-group-item">Cras justo odio</li> -->
-
                 </ul>
               </div>
             </div>
           </div>
+          <!-- %%% Last closing div for address dropdown -->
         </div>
 
+        <!-- #### column for the article generation -->
         <div class="col">
+          <!-- card for the articles -->
           <section class="card">
+            <!-- article card header -->
             <h3 class="card-header" style="text-align: center;">
               Recent Coronavirus News from DFW
             </h3>
+            <!-- card body for the articles to append to -->
             <div class="card-body" id="mainCardContents">
             </div>
           </section>
         </div>
+        <!-- %%% Last closing div for article generation -->
       </section>
 
     </main>

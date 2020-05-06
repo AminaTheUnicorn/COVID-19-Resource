@@ -4,17 +4,27 @@ var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-teleg
 var newsUrl = 'https://newsapi.org/v2/everything?pageSize=100&domains=' + newsAPIDomains + '&qInTitle=covid-19 OR(coronavirus) OR(Coronavirus disease) OR(Coronavirus pandemic)&apiKey=' + newsAPI;
 
 fetch(newsUrl)
-.then(function(response) {
-console.log(response.json());
-})
+  .then(function (response) {
+    console.log(response.json());
+  })
 
+var dropDownList = [];
 
-// var requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-//   };
-  
-//   fetch("https://covid-19-testing.github.io/locations/texas/complete.json", requestOptions)
-//     .then(response => response.json())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://covid-19-testing.github.io/locations/texas/complete.json", requestOptions)
+  .then(response => response.json())
+  .then(result => {
+    result.forEach(function (clinic) {
+      if (dropDownList.indexOf(clinic.physical_address[0].city) === -1) {
+        dropDownList.push(clinic.physical_address[0].city)
+      }
+    
+    });
+     console.log(dropDownList);
+  })
+  .catch(error => console.log('error', error));
+

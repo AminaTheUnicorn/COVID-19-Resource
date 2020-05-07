@@ -12,7 +12,7 @@ Lastly, we decided we wanted the application to help prevent the spread of covid
 
 The following image demonstrates the application functionality:
 
-![Covid-19 Resource for the DFW Metroplex Gif](./Assets/Farmers-Weather-Dashboard.gif)
+![Covid-19 Resource for the DFW Metroplex Gif](COVID_News_App.gif)
 
 ## Technologies Used
 - jQuery and javascript - Used to fetch data from [newsapi.org] and [https://covid-19-apis.postman.com/] open API sources as well as dynamically change html and to display response data. 
@@ -20,3 +20,4 @@ The following image demonstrates the application functionality:
 - HTML - Used to create parent elements on the DOM.
 - CSS - Styles html elements on page.
 - GitHub - Hosts repository that can be deployed to GitHub Pages.
+- anime.js - utilized for header anmations.  

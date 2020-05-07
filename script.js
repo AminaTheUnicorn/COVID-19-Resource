@@ -5,24 +5,24 @@ var newsAPIDomains = "dallasnews.com,wfaa.com,fox4news.com,nbcdfw.com,star-teleg
 var newsUrl = 'https://newsapi.org/v2/everything?sortBy=publishedAt&pageSize=5&qInTitle=+covid-19 OR(+coronavirus OR +corona-virus OR +disease OR +pandemic)&domains=' + newsAPIDomains + '&apiKey=' + newsAPI;
 // Function for generating the news cards from articles
 fetch(newsUrl)
-.then(response => response.json())
-.then(function (response) {
+  .then(response => response.json())
+  .then(function (response) {
     console.log(response);
     for (let i = 0; i < response.articles.length; i++) {
-        var newArticleDiv = $("<article>").attr("class", "card");
-        var articleHeader = $("<h4>").attr("class", "card-header").text(response.articles[i].title);
-        newArticleDiv.append(articleHeader);
-        var articleBody = $("<div>").attr("class", "card-body");
-        newArticleDiv.append(articleBody);
-        var articleDescript = $("<h6>").text(response.articles[i].description);
-        articleBody.append(articleDescript);
-        var info = $("<p>").text("Sourced From: " + response.articles[i].source.name + " - Written By: " + response.articles[i].author)
-        articleBody.append(info);
-        var button = $("<a>").attr("class", "btn btn-primary").attr("href", response.articles[i].url).attr("target", "blank").text("See Full Story")
-        articleBody.append(button)
-        $("#mainCardContents").append(newArticleDiv)
+      var newArticleDiv = $("<article>").attr("class", "card");
+      var articleHeader = $("<h4>").attr("class", "card-header").text(response.articles[i].title);
+      newArticleDiv.append(articleHeader);
+      var articleBody = $("<div>").attr("class", "card-body");
+      newArticleDiv.append(articleBody);
+      var articleDescript = $("<h6>").text(response.articles[i].description);
+      articleBody.append(articleDescript);
+      var info = $("<p>").text("Sourced From: " + response.articles[i].source.name + " - Written By: " + response.articles[i].author)
+      articleBody.append(info);
+      var button = $("<a>").attr("class", "btn btn-primary").attr("href", response.articles[i].url).attr("target", "blank").text("See Full Story")
+      articleBody.append(button)
+      $("#mainCardContents").append(newArticleDiv)
     }
-})
+  })
 
 
 // City DropDown JavaScript
@@ -43,63 +43,63 @@ fetch("https://covid-19-testing.github.io/locations/texas/complete.json", reques
       }
 
     });
-   
- 
-  
-    
-    dropDownList.forEach(function(listValue){
-   
-   var button = document.createElement("button");
-   $(button).addClass("dropdown-item"); 
-   button.innerHTML = listValue;
-    
 
-    $(".dropdown-menu").append(button);
+
+
+
+    dropDownList.forEach(function (listValue) {
+
+      var button = document.createElement("button");
+      $(button).addClass("dropdown-item");
+      button.innerHTML = listValue;
+
+
+      $(".dropdown-menu").append(button);
 
 
     });
 
 
     // var locations = [];
-    
-  
+
+
     console.log(result);
 
-     
-   
-    
 
-     function clinicLocations (){
-       $("#testList").empty();
+
+
+
+    function clinicLocations() {
+      $("#testList").empty();
       var cityLocal = (this.textContent);
-      var locations = result.filter(item => item.physical_address[0].city ===cityLocal)
+      var locations = result.filter(item => item.physical_address[0].city === cityLocal)
 
-      locations.forEach(location =>{
+      locations.forEach(location => {
 
-     var li_Div = $("<li class='list-group-item'>");
-     var address = $("<p>").text("Address: " + location.physical_address[0].address_1);
-     var name = $("<p>").text("Name: " + location.name);
-     var phone = $("<p>").text("Phone: " + location.phones[0].number);
-    
-   li_Div.append(name,address,phone);
-   
-   li_Div.appendTo("#testList");
+        var li_Div = $("<li class='list-group-item'>");
+        var address = $("<p>").text("Address: " + location.physical_address[0].address_1);
+        var name = $("<p>").text("Name: " + location.name);
+        var phone = $("<p>").text("Phone: " + location.phones[0].number);
+
+        li_Div.append(name, address, phone);
+
+        li_Div.appendTo("#testList");
 
 
-   
+
+      })
+
+
+    }
+    $(".dropdown-item").on("click", clinicLocations)
   })
-  
-  
-} 
-$(".dropdown-item").on("click",clinicLocations) 
-    })
-    .catch(error => console.log('error', error));
-    
+  .catch(error => console.log('error', error));
 
 
 
-    
 
-  
+
+
+
 
 

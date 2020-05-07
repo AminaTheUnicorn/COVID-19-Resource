@@ -26,7 +26,7 @@
   <body>
 
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <marquee> <span class="navbar-brand mb-1 h1">
             <h1 class="display-1">COVID-19 UPDATES</h1>
           </span> </marquee>
@@ -35,10 +35,10 @@
     <main class="container">
       <!-- Parent Row -->
       <section class="row justify-content-around">
-        <div class="col">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div class="row">
             <div class="col">
-              <!-- card for the covid 19 helpful tips and resouces -->
+              <!-- #### card for the covid 19 helpful tips and resouces -->
               <section class="card">
                 <!-- header for tips and resources card -->
                 <h3 class="card-header" style="text-align: center;">
@@ -65,7 +65,7 @@
                     </div>
                   </div>
                   <!-- content for each topic -->
-                  <div class="col-8">
+                  <div class="col-8 pr-5">
                     <div class="tab-content" id="nav-tabContent">
                       <div class="tab-pane fade show active" id="list-know" role="tabpanel"
                         aria-labelledby="list-know-list">
@@ -153,33 +153,41 @@
                   </div>
                 </div>
               </section>
+              <!-- ^^^^ Last closing element for the covid tips  -->
             </div>
           </div>
           <!-- #### row for the drop down and address display -->
-          <div class="row">
-            <div class="col">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <!-- <button class="dropdown-item" type="button">Action</button> -->
-                </div>
-              </div>
 
-              <div class="card" style="width: 18rem;">
-                <ul id="testList" class="list-group list-group-flush">
-                  <!-- <li class="list-group-item">Cras justo odio</li> -->
-                </ul>
-              </div>
+          <div class="row justify-content-center mt-3">
+            <div class="col">
+              <section class="card">
+                <h3 class="card-header" style="text-align: center;">
+                  Texas Testing Facilities
+                </h3>
+                <div class="card-body" id="testing" style="min-height:35em;">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle pl-5 pr-5" type="button" id="dropdownMenu2"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Choose a City From List
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <!-- <button class="dropdown-item" type="button">Action</button> -->
+                    </div>
+                  </div>
+                  <div class="card" style="width: 20rem;">
+                    <ul id="testList" class="list-group list-group-flush">
+                      <!-- <li class="list-group-item">Cras justo odio</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
-          <!-- %%% Last closing div for address dropdown -->
+          <!-- ^^^^ Last closing element for address dropdown -->
         </div>
 
         <!-- #### column for the article generation -->
-        <div class="col">
+        <div class="col mt-3 mt-sm-3 mt-md-3 mt-lg-0 mt-xl-0">
           <!-- card for the articles -->
           <section class="card">
             <!-- article card header -->
@@ -191,7 +199,7 @@
             </div>
           </section>
         </div>
-        <!-- %%% Last closing div for article generation -->
+        <!-- ^^^^ Last closing element for article generation -->
       </section>
 
     </main>

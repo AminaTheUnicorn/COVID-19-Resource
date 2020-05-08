@@ -6,11 +6,8 @@
 
 /* Text Animation */
 
-
-
-
 .navbar{
-    background-color: rgb(91, 99, 112);
+    background-color: #ff3c38;
 }
 
 .ml1 {
@@ -23,6 +20,7 @@
   .ml1 .letter {
     display: inline-block;
     line-height: 1em;
+    color: white;
   }
   
   .ml1 .text-wrapper {
@@ -40,7 +38,7 @@
     left: 0;
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: #007bff;
     transform-origin: 0 0;
   }
   
@@ -48,32 +46,19 @@
   .ml1 .line2 { bottom: 0; }
 
 
-/* Scroll to top */
-
-.scrollToTop{
-    width:40px;
-    height: 40px;
-    background-image: url('arrow.svg;');
-    position:fixed;
-    right:30px;
-    bottom:30px;
-    display:none;
-}
-
-
 /* Footer */
 
 .site-footer
 {
-  background-color:#26272b;
+  background-color:#ff3c38;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color:#ffffff;
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
+  border-top-color:#ffffff;
   opacity:0.5
 }
 .site-footer hr.small
@@ -82,7 +67,8 @@
 }
 .site-footer h6
 {
-  color:#fff;
+  color:#ffffff;
+  font-weight: 600;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
@@ -94,7 +80,7 @@
 }
 .site-footer a:hover
 {
-  color:#3366cc;
+  color:#007bff;
   text-decoration:none;
 }
 .footer-links
@@ -108,7 +94,7 @@
 }
 .footer-links a
 {
-  color:#737373
+  color:#ffffff;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -131,7 +117,7 @@
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:;
 }
 .copyright-text
 {
@@ -175,8 +161,8 @@
   font-size:13px
 }
 .social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
+  background-color:#29aafe;
+  color:#ffffff;
   font-size:16px;
   display:inline-block;
   line-height:44px;
@@ -201,21 +187,9 @@
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
+.social-icons a.GitHub:hover
 {
   background-color:#3b5998
-}
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
-}
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
-}
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
 }
 @media (max-width:767px)
 {

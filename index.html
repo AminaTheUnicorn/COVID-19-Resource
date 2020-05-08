@@ -17,6 +17,9 @@
   <!-- Animation Library  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/144628dd7b.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -48,7 +51,7 @@
               <!-- #### card for the covid 19 helpful tips and resouces -->
               <section class="card">
                 <!-- header for tips and resources card -->
-                <h3 class="card-header" style="text-align: center;">
+                <h3 id="protect" class="card-header" style="text-align: center;">
                   How to Protect Yourself & Others
                 </h3>
                 <div class="row">
@@ -168,7 +171,7 @@
           <div class="row justify-content-center mt-3">
             <div class="col">
               <section class="card">
-                <h3 class="card-header" style="text-align: center;">
+                <h3 id="test" class="card-header" style="text-align: center;">
                   Texas Testing Facilities
                 </h3>
                 <div class="card-body" id="testing" style="min-height:35em;">
@@ -198,7 +201,7 @@
           <!-- card for the articles -->
           <section class="card">
             <!-- article card header -->
-            <h3 class="card-header" style="text-align: center;">
+            <h3 id="recent" class="card-header" style="text-align: center;">
               Recent Coronavirus News from DFW
             </h3>
             <!-- card body for the articles to append to -->
@@ -223,7 +226,7 @@
               sources. Search terms were included
               in the queryUrl to filter in articles related to the covid-19 pandemic and the 5 most recent are displayed
               in the application. The article display
-              shows the viewer the title of the article, a brief description,the source of the article, as well as a
+              shows the viewer the title of the article, a brief description, the source of the article, as well as a
               link to the source that opens up in a new browser tab.
             </p>
           </div>
@@ -231,21 +234,21 @@
           <div class="col-xs-6 col-md-3">
             <h6>Technology Used</h6>
             <ul class="footer-links">
-              <li><a href="">jQuery</a></li>
-              <li><a href="">Bootstrap</a></li>
-              <li><a href="">GitHub</a></li>
-              <li><a href="">JavaScript</a></li>
-              <li><a href="">anime.js</a></li>
-              <li><a href="">HTML/CSS</a></li>
+              <li><a href="https://jquery.com/">jQuery</a></li>
+              <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+              <li><a href="https://github.com/">GitHub</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://animejs.com/">anime.js</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML/CSS</a></li>
             </ul>
           </div>
 
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">How to Protect Yourself & Others</a></li>
-              <li><a href="http://scanfcode.com/contact/">Texas Testing Facilities</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Recent Coronavirus News from DFW</a></li>
+              <li><a href="#protect">How to Protect Yourself & Others</a></li>
+              <li><a href="#test">Texas Testing Facilities</a></li>
+              <li><a href="#recent">Recent Coronavirus News from DFW</a></li>
             </ul>
           </div>
         </div>
@@ -260,17 +263,14 @@
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li>GitHub<a class="GitHub" href="https://github.com/brianlfarmerllc/Project-1/pull/36"><i
+                    class="fa fa-github" aria-hidden="true"></i></a></li>
+
             </ul>
           </div>
-        </div>
-      </div>
     </footer>
     </footer>
-    
+
     <!-- Auto Scroll -->
     <a id="back2Top" title="Back to top" href="#">&#10148;</a>
     <!-- Optional Moment File -->

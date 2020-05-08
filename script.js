@@ -134,20 +134,26 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
+
+
+  
 ////// scroll to top //////
 
-$(document).ready(function(){
-  //Check to see if the window is top if not then display button
-  $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-          $('.scrollToTop').fadeIn();
-      } else {
-          $('.scrollToTop').fadeOut();
-      }
-  });
-  //Click event to scroll to top
-  $('.scrollToTop').click(function(){
-      $('html, body').animate({scrollTop : 0},800);
+/*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+  var height = $(window).scrollTop();
+  if (height > 100) {
+      $('#back2Top').fadeIn();
+  } else {
+      $('#back2Top').fadeOut();
+  }
+});
+$(document).ready(function() {
+  $("#back2Top").click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;
   });
+
 });
+/*Scroll to top when arrow up clicked END*/

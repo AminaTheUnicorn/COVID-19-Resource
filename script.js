@@ -79,7 +79,11 @@ fetch("https://covid-19-testing.github.io/locations/texas/complete.json", reques
         var li_Div = $("<li class='list-group-item'>");
         var address = $("<p>").text("Address: " + location.physical_address[0].address_1);
         var name = $("<p>").text("Name: " + location.name);
-        var phone = $("<p>").text("Phone: " + location.phones[0].number);
+        if (location.phones[0] !== undefined) {
+          var phone = $("<p>").text("Phone: " + location.phones[0].number);
+        } else {
+          var phone = $("<p>").text("Phone: None" );
+        }
 
         li_Div.append(name, address, phone);
 

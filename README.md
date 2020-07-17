@@ -25,4 +25,5 @@ The following image demonstrates the application functionality:
 
 ## Collaborators
 brianlfarmerllc [https://github.com/brianlfarmerllc]
+
 Hannah Hohman [https://github.com/hannahhohman]

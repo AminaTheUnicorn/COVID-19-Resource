@@ -9,7 +9,8 @@ Using an open API source from [newsapi.org] we were able to set up an article se
 With this we were able to achieve our original goal of creating an easy to use resource, but while we were developing the application, we decided we could make this a much more powerful recourse for other DFW residents by including a list of locations providing covid-19 testing. Utilizing [https://covid-19-apis.postman.com/], an open API, were able to compile a list of cities with testing facilities. These cities are listed in a drop-down menu. When you select a city from the drop-down menu you will be shown a list of locations providing testing with an address to that location as well as contact info if available.
 
 Lastly, we decided we wanted the application to help prevent the spread of covid-19. We included a section to display helpful guidelines from the Center of Disease Control and the World Health Organization as well as direct links to the CDC and WHO for more current information as conditions develop.
-
+## View Site
+https://aminatheunicorn.github.io/COVID-19-Resource/
 The following image demonstrates the application functionality:
 
 ![Covid-19 Resource for the DFW Metroplex Gif](COVID_News_App.gif)
@@ -20,4 +21,8 @@ The following image demonstrates the application functionality:
 - HTML - Used to create parent elements on the DOM.
 - CSS - Styles html elements on page.
 - GitHub - Hosts repository that can be deployed to GitHub Pages.
-- anime.js - utilized for header anmations.  
+- anime.js - utilized for header animations.  
+
+## Collaborators
+brianlfarmerllc [https://github.com/brianlfarmerllc]
+Hannah Hohman [https://github.com/hannahhohman]
